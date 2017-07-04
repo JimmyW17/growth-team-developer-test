@@ -26,16 +26,16 @@
     </div>
     <div class="col-md-8">
       <div class="row header">
-        <div class="col-md-6 col-md-offset-2">
-          <h1>Search Gems</h1>
+        <div class="col-md-8 col-md-offset-1">
+          <span>Search Gems</span>
         </div>
       </div>
       <div class="row searchbar">
-        <div class="col-md-7 col-md-offset-2">
+        <div class="col-md-8 col-md-offset-1">
           <!-- Form for search query of gems -->
           <%= form_tag('/') %>
           <%= text_field_tag 'query', nil, placeholder: 'Search' %>
-          <%= image_submit_tag('magnifying-glass.png') %>
+          <%= image_submit_tag('magnifying-glass.png', id: 'submit-button') %>
         </div>
       </div>
     </div>
