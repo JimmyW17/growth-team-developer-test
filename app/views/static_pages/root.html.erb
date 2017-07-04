@@ -9,9 +9,11 @@
       </div>
       <div class="row">
         <div class="col-md-8"></div>
-        <div class="col-md-4 menu-tab" id="search-tab">
-          <span>Search</span>
-        </div>
+        <a href="#">
+          <div class="col-md-4 menu-tab" id="search-tab">
+            <span>Search</span>
+          </div>
+        </a>
       </div>
       <div class="row">
         <div class="col-md-8"></div>
@@ -20,9 +22,22 @@
             <span>Favorites</span>
           </div>
         </a>
-
       </div>
     </div>
-    <div class="col-md-8"></div>
+    <div class="col-md-8">
+      <div class="row header">
+        <div class="col-md-6 col-md-offset-2">
+          <h1>Search Gems</h1>
+        </div>
+      </div>
+      <div class="row searchbar">
+        <div class="col-md-7 col-md-offset-2">
+          <!-- Form for search query of gems -->
+          <%= form_tag('/') %>
+          <%= text_field_tag 'query', nil, placeholder: 'Search' %>
+          <%= image_submit_tag('magnifying-glass.png') %>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
