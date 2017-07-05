@@ -90,7 +90,14 @@ html {
 }
 
 #submit-button {
-  margin-left: -50px;
-  position: relative;
-  top: 5px;
+  position: absolute;
+  top: 334px;
+  left: 1375.9px;
+}
+
+#results-div {
+  padding: 0;
+  position: absolute;
+  left: 705px;
+  top: 435px;
 }
