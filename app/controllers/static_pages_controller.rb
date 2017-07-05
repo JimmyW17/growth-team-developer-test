@@ -6,4 +6,7 @@ class StaticPagesController < ApplicationController
   def favorites
   end
 
+  def search
+
+  end
 end
