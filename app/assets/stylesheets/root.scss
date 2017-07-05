@@ -4,22 +4,15 @@ html {
   font-family: Lato-Regular, serif;
 }
 
-.container-fluid {
-  height: 100%;
-}
-
-.header {
-  // margin-top: 100px;
-  margin-bottom: 46px;
-}
-
 .header span {
+  position: absolute;
+  left: 705px;
+  top: 203px;
   font-size: 40px;
   font-style: normal;
   font-stretch: normal;
   font-weight: 700;
   text-align: left;
-  padding-left: 30px;
 }
 
 .full_height {
@@ -55,7 +48,7 @@ html {
 }
 
 .nav-tabs {
-  position: relative;
+  position: absolute;
   left: 390px;
   top: 370px;
 }
@@ -67,6 +60,7 @@ html {
   height: 50px !important;
   width: 143px !important;
   display: table;
+  padding-left: 20px;
 }
 
 .menu-tab span {
@@ -76,11 +70,22 @@ html {
 }
 
 #query {
-  border-radius: 30px;
-  height: 60px;
-  width: 80%;
+  position: absolute;
+  border-radius: 40px;
+  border: none;
+  border: solid 1px #5E5E5E;
+  height: 89px;
+  width: 780px;
   padding-left: 30px;
   padding-right: 50px;
+  left: 648px;
+  top: 299px;
+}
+
+::-webkit-input-placeholder {
+  font-size: 18px;
+  font-weight: 400;
+  color: #4c4c4c;
 }
 
 #submit-button {
