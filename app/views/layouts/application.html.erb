@@ -1,14 +1,32 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>FrontendTest</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+  <head>
+    <title>FrontendTest</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <div class="no_padding fixed-row" id="map-container">
+      <%= image_tag('map.png', id: 'map-image') %>
+      <div class="logo">
+        <%= image_tag('teachable-logo.png') %>
+      </div>
+      <div class="nav-tabs">
+        <%= link_to(root_path) do %>
+        <div class="menu-tab" id="search-tab">
+          <span>Search</span>
+        </div>
+        <% end %>
+        <!-- Row for favorite's tab -->
+        <%= link_to(favorites_path) do %>
+        <div class="menu-tab" id="favorites-tab">
+          <span>Favorites</span>
+        </div>
+        <% end %>
+      </div>
+    </div>
+    <%= yield %>
 
-<%= yield %>
-
-</body>
+  </body>
 </html>
