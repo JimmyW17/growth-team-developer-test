@@ -1,9 +1,19 @@
+// AJAX call for search result
 $('#gem-name').attr('href', '<%= j @gem_uri %>');
 $('#gem-name').html('<%= j @gem_name %>');
 $('#gem-info-header').html('Information');
 $('#gem-info').html('<%= j @gem_info %>');
 $('#gem-dep-header').html('Dependencies')
+$('#gem-dep').html('');
 // Loop through dependencies and create li element for each
 <% @gem_dep.each do |name,uri| %>
-$('#gem-dep').append('<li><%= j link_to(name, uri, target:"_blank")%> <%= image_tag("star-gray.png") %></li>');
+$('#gem-dep').append('<li><%= j link_to(name, uri, target:"_blank")%> <%= image_tag("star-gray.png", class:'star') %></li>');
 <% end %>
+// Onclick function for stars
+$('img.star').on('click',function(){
+  $(this).attr('src','/assets/star-blue.png');
+  // Returns the name of dependency next to clicked star
+  var $dep = $(this).siblings('a').text()
+  // Stores key as 'fav_depName' and value as 'depName' in localStorage
+  localStorage.setItem('fav_'+$dep, $dep);
+})
