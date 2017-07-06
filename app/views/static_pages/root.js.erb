@@ -1,0 +1,7 @@
+$('#gem-name').attr('href', '<%= j @gem_uri %>');
+$('#gem-name').html('<%= j @gem_name %>');
+$('#gem-info-header').html('Information');
+$('#gem-info').html('<%= j @gem_info %>');
+<% @gem_dep.each do |name,uri| %>
+$('#gem-dep').append('<li><%= j link_to name, uri, target:'_blank' %></li>')
+<% end %>

@@ -1,7 +1,7 @@
 body,
 html {
   height: 100% !important;
-  font-family: Lato-Regular, serif;
+  font-family: Lato-Regular, serif !important;
 }
 
 .header span {
@@ -100,4 +100,25 @@ html {
   position: absolute;
   left: 705px;
   top: 435px;
+
+  #gem-name {
+    font-size: 18px;
+    font-weight: 400;
+    color: #1F6BDD;
+    margin-bottom: 32px;
+  }
+
+  #gem-info-header{
+    color: #2b2f33;
+    font-size: 15px;
+    font-weight: 400;
+    margin-bottom: 8px;
+  }
+
+  #gem-info {
+    color: #8E8E8E;
+    font-size: 15px;
+    font-weight: 400;
+    margin-bottom: 29px;
+  }
 }
