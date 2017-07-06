@@ -2,6 +2,8 @@ $('#gem-name').attr('href', '<%= j @gem_uri %>');
 $('#gem-name').html('<%= j @gem_name %>');
 $('#gem-info-header').html('Information');
 $('#gem-info').html('<%= j @gem_info %>');
+$('#gem-dep-header').html('Dependencies')
+// Loop through dependencies and create li element for each
 <% @gem_dep.each do |name,uri| %>
-$('#gem-dep').append('<li><%= j link_to name, uri, target:'_blank' %></li>')
+$('#gem-dep').append('<li><%= j link_to(name, uri, target:"_blank")%> <%= image_tag("star-gray.png") %></li>');
 <% end %>

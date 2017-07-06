@@ -108,7 +108,7 @@ html {
     margin-bottom: 32px;
   }
 
-  #gem-info-header{
+  #gem-info-header, #gem-dep-header{
     color: #2b2f33;
     font-size: 15px;
     font-weight: 400;
@@ -120,5 +120,15 @@ html {
     font-size: 15px;
     font-weight: 400;
     margin-bottom: 29px;
+  }
+
+  #gem-dep {
+    padding: 0;
+    margin-bottom: 10px;
+
+    li {
+      list-style-type: none;
+      margin-bottom: 11px;
+    }
   }
 }
