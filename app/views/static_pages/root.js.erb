@@ -11,6 +11,10 @@ $('#gem-info-header').html('Information');
 $('#gem-info').html('<%= j @gem_info %>');
 $('#gem-dep-header').html('Dependencies')
 $('#gem-dep').html('');
+
+<% if @gem_dep.size == 0 %>
+$('#gem-dep').append('<p id="gem-dep-none">None</p>');
+<% else %>
 // Loop through dependencies and create li element for each
 <% @gem_dep.each do |name,uri| %>
 if (localStorage.getItem('fav_<%= name %>') != null) {
@@ -18,6 +22,7 @@ if (localStorage.getItem('fav_<%= name %>') != null) {
 } else {
   $('#gem-dep').append('<li><%= j link_to(name, uri, target:"_blank")%> <%= image_tag("star-gray.png", class:'star') %></li>');
 }
+<% end %>
 <% end %>
 // Onclick function for stars
 $('img.star').on('click',function(){
