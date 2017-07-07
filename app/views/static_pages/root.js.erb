@@ -26,9 +26,14 @@ if (localStorage.getItem('fav_<%= name %>') != null) {
 <% end %>
 // Onclick function for stars
 $('img.star').on('click',function(){
-  $(this).attr('src','/assets/star-blue.png');
   // Returns the name of dependency next to clicked star
   var $dep = $(this).siblings('a').text()
-  // Stores key as 'fav_depName' and value as 'depName' in localStorage
-  localStorage.setItem('fav_'+$dep, $dep);
+  if(localStorage.getItem('fav_'+$dep)) {
+    localStorage.removeItem('fav_'+$dep);
+    $(this).attr('src','/assets/star-gray.png');
+  } else {
+    // Stores key as 'fav_depName' and value as 'depName' in localStorage
+    localStorage.setItem('fav_'+$dep, $dep);
+    $(this).attr('src','/assets/star-blue.png');
+  }
 })
