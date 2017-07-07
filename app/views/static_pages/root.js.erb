@@ -1,5 +1,11 @@
 // AJAX call for search result
 $('#gem-name').attr('href', '<%= j @gem_uri %>');
+var $gem_name = '<%= @gem_name %>';
+if (localStorage.getItem('fav_'+$gem_name)) {
+  $('#gem-name-span img').attr('src', '/assets/star-blue.png').attr('class', 'star');
+} else {
+  $('#gem-name-span img').attr('src', '/assets/star-gray.png').attr('class', 'star');
+}
 $('#gem-name').html('<%= j @gem_name %>');
 $('#gem-info-header').html('Information');
 $('#gem-info').html('<%= j @gem_info %>');

@@ -105,8 +105,11 @@ html {
     font-size: 18px;
     font-weight: 400;
     color: #1F6BDD;
-    display: block;
     margin-bottom: 32px;
+  }
+
+  #gem-info-header {
+    margin-top: 32px;
   }
 
   #gem-info-header, #gem-dep-header{
