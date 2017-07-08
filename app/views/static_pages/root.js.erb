@@ -18,9 +18,9 @@ $('#gem-name').attr('href', '<%= j @gem_uri %>');
 var $gem_name = '<%= @gem_name %>';
 // Check if gem is already in favorites -- blue star if it is; gray star if not
 if (localStorage.getItem('fav_'+$gem_name)) {
-  $('#gem-name-span img').attr('src', '/assets/star-blue.png').attr('class', 'star');
+  $('#gem-name-span img').attr('src', '../../assets/star-blue.png').attr('class', 'star');
 } else {
-  $('#gem-name-span img').attr('src', '/assets/star-gray.png').attr('class', 'star');
+  $('#gem-name-span img').attr('src', '../../assets/star-gray.png').attr('class', 'star');
 }
 // Adds gem name between <a></a>....eg<a>foo</a>
 $('#gem-name').html('<%= j @gem_name %>');
