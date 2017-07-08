@@ -6,22 +6,23 @@
 </div>
 
 <script type="text/javascript">
+  // Creates <li> element for every gem in localStorage, including star icon and link to gem
   for (var key in localStorage) {
-    console.log(localStorage[key]);
-    var $gem = localStorage[key];
-    var $li = `<li><%=image_tag("star-blue.png", class:"star")%><a href="https://rubygems.org/gems/${$gem}" target="_blank">${$gem}</a></li>`
-    $('#favorites-ul').append($li);
+    // Ensures non gem-related keys in localStorage are displayed
+    if(key.substring(0,4) == 'fav_'){
+      var $gem = localStorage[key];
+      var $li = `<li><%=image_tag("star-blue.png", class:"star")%><a href="https://rubygems.org/gems/${$gem}" target="_blank">${$gem}</a></li>`
+      $('#favorites-ul').append($li);
+    }
   }
 
-  $('img.star').on('click',function(){
+  // Onclick event for clicking star to remove from favorites
+  $('img.star').on('click', function () {
     // Returns the name of dependency next to clicked star
     var $dep = $(this).siblings('a').text()
-    if(localStorage.getItem('fav_'+$dep)) {
-      localStorage.removeItem('fav_'+$dep);
+    if (localStorage.getItem('fav_' + $dep)) {
+      localStorage.removeItem('fav_' + $dep);
       $(this).parent().remove();
-    } else {
-      // Stores key as 'fav_depName' and value as 'depName' in localStorage
-      localStorage.setItem('fav_'+$dep, $dep);
-      $(this).attr('src','/assets/star-blue.png');
-    }});
+    }
+  });
 </script>
