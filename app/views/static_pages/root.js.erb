@@ -1,5 +1,14 @@
 // AJAX call for search result
-
+<% if @gem_exist %>
+// For reverting style if previous search results in not finding gem
+if(localStorage.getItem('prevSearchExist')=='false'){
+  $('#gem-not-found').html("");
+  $('#query').removeClass('red-border');
+  $('.searchbar').removeClass('red-font');
+  $('#submit-button').attr('src', '/assets/magnifying-glass.png');
+  localStorage.setItem('prevSearchExist', true);
+}
+$('#results-div').show();
 // Sets anchor tag href to gem's uri
 $('#gem-name').attr('href', '<%= j @gem_uri %>');
 var $gem_name = '<%= @gem_name %>';
@@ -45,3 +54,12 @@ $('img.star').on('click',function(){
     $(this).attr('src','/assets/star-blue.png');
   }
 })
+// If @gem doesn't exist (couldn't find gem)
+<% else %>
+  $('#gem-not-found').html("Oh no! Looks like that gem can't be found.");
+  $('#query').addClass('red-border');
+  $('.searchbar').addClass('red-font');
+  $('#submit-button').attr('src', '/assets/magnifying-glass-red.png');
+  localStorage.setItem('prevSearchExist',false);
+  $('#results-div').hide();
+<% end %>

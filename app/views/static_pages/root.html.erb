@@ -7,6 +7,9 @@
   <%= text_field_tag 'query', nil, placeholder: 'Search' %>
   <%= image_submit_tag('magnifying-glass.png', id: 'submit-button') %>
 </div>
+<i class="fa fa-search fa-2x" aria-hidden="true" id="search-button"></i>
+
+<span id="gem-not-found"></span>
 <div id="results-div">
   <span id="gem-name-span">
     <a href="#" id="gem-name" target="_blank"></a>
@@ -20,6 +23,8 @@
   </ul>
 </div>
 <script type="text/javascript">
+  // Default state of searchbar (meaning not red border/color from searching a gem that doesn't exist)
+  localStorage.setItem('prevSearchExist',true);
   // Gives the search tab the class "active" to add background color
   $('#search-tab').addClass("active");
 </script>
