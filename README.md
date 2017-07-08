@@ -1,9 +1,9 @@
-##Heroku: 
+## Heroku: 
 
 https://teachable-gemsearch.herokuapp.com/
 
 
-##Installation
+## Installation
 ```
 bundle install
 rails s
