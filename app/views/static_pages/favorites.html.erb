@@ -9,7 +9,7 @@
   // Creates <li> element for every gem in localStorage, including star icon and link to gem
   for (var key in localStorage) {
     // Ensures non gem-related keys in localStorage are displayed
-    if(key.substring(0,4) == 'fav_'){
+    if (key.substring(0, 4) == 'fav_') {
       var $gem = localStorage[key];
       var $li = `<li><%=image_tag("star-blue.png", class:"star")%><a href="https://rubygems.org/gems/${$gem}" target="_blank">${$gem}</a></li>`
       $('#favorites-ul').append($li);
@@ -18,11 +18,9 @@
 
   // Onclick event for clicking star to remove from favorites
   $('img.star').on('click', function () {
-    // Returns the name of dependency next to clicked star
+    // Storing name of the gem that the clicked star represents
     var $dep = $(this).siblings('a').text()
-    if (localStorage.getItem('fav_' + $dep)) {
-      localStorage.removeItem('fav_' + $dep);
-      $(this).parent().remove();
-    }
+    localStorage.removeItem('fav_' + $dep);
+    $(this).parent().remove();
   });
 </script>

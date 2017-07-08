@@ -1,18 +1,24 @@
 // AJAX call for search result
+
+// Sets anchor tag href to gem's uri
 $('#gem-name').attr('href', '<%= j @gem_uri %>');
 var $gem_name = '<%= @gem_name %>';
+// Check if gem is already in favorites -- blue star if it is; gray star if not
 if (localStorage.getItem('fav_'+$gem_name)) {
   $('#gem-name-span img').attr('src', '/assets/star-blue.png').attr('class', 'star');
 } else {
   $('#gem-name-span img').attr('src', '/assets/star-gray.png').attr('class', 'star');
 }
+// Adds gem name between <a></a>....<a>foo</a>
 $('#gem-name').html('<%= j @gem_name %>');
 $('#gem-info-header').html('Information');
 $('#gem-info').html('<%= j @gem_info %>');
 $('#gem-dep-header').html('Dependencies')
 $('#gem-dep').html('');
 
+// Checks if gem has any dependencies
 <% if @gem_dep.size == 0 %>
+// Displays "None" if no dependencies
 $('#gem-dep').append('<p id="gem-dep-none">None</p>');
 <% else %>
 // Loop through dependencies and create li element for each
@@ -24,10 +30,12 @@ if (localStorage.getItem('fav_<%= name %>') != null) {
 }
 <% end %>
 <% end %>
+
 // Onclick function for stars
 $('img.star').on('click',function(){
-  // Returns the name of dependency next to clicked star
-  var $dep = $(this).siblings('a').text()
+  // Storing name of the gem that the clicked star represents
+  var $dep = $(this).siblings('a').text();
+  // If the dependecy is already stored in favorites/localStorage, remove it and change to a gray star
   if(localStorage.getItem('fav_'+$dep)) {
     localStorage.removeItem('fav_'+$dep);
     $(this).attr('src','/assets/star-gray.png');
