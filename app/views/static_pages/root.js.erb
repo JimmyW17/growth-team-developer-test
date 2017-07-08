@@ -9,6 +9,8 @@ if(localStorage.getItem('prevSearchExist')=='false'){
   $('#submit-button').attr('src', '/assets/magnifying-glass.png');
   localStorage.setItem('prevSearchExist', true);
 }
+
+// Search result gets populated here
 // Unhides result div if it was hidden
 $('#results-div').show();
 // Sets anchor tag href to gem's uri
@@ -20,7 +22,7 @@ if (localStorage.getItem('fav_'+$gem_name)) {
 } else {
   $('#gem-name-span img').attr('src', '/assets/star-gray.png').attr('class', 'star');
 }
-// Adds gem name between <a></a>....<a>foo</a>
+// Adds gem name between <a></a>....eg<a>foo</a>
 $('#gem-name').html('<%= j @gem_name %>');
 $('#gem-info-header').html('Information');
 $('#gem-info').html('<%= j @gem_info %>');
