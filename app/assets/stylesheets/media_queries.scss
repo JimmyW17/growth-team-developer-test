@@ -1,60 +1,19 @@
-
 /* Smartphones (portrait and landscape) ----------- */
-@media only screen
-and (min-device-width : 320px)
-and (max-device-width : 480px) {
-/* Styles */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+  /* Styles */
 }
-
 /* Smartphones (landscape) ----------- */
-@media only screen
-and (min-width : 321px) {
-/* Styles */
-}
+@media only screen and (min-width : 321px) {
+  /* Styles */
+  // root.scss media queries
 
-/* Smartphones (portrait) ----------- */
-@media only screen
-and (max-width : 320px) {
-/* Styles */
-}
-
-/* iPads (portrait and landscape) ----------- */
-@media only screen
-and (min-device-width : 768px)
-and (max-device-width : 1024px) {
-/* Styles */
-}
-
-/* iPads (landscape) ----------- */
-@media only screen
-and (min-device-width : 768px)
-and (max-device-width : 1024px)
-and (orientation : landscape) {
-/* Styles */
-}
-
-/* iPads (portrait) ----------- */
-@media only screen
-and (min-device-width : 768px)
-and (max-device-width : 1024px)
-and (orientation : portrait) {
-/* Styles */
-}
-
-/* Desktops and laptops ----------- */
-@media only screen
-and (min-width : 1224px) {
   #map-image {
     width: 400px;
   }
 
-  .header span {
-    left: 600px;
-    top: 203px;
-  }
-
   .logo {
     top: 3px;
+
     img {
       left: 265px;
     }
@@ -65,30 +24,109 @@ and (min-width : 1224px) {
     top: 270px;
   }
 
+  .header span {
+    left: 500px;
+    top: 103px;
+  }
+
   #query {
     height: 89px;
-    width: 780px;
-    left: 648px;
-    top: 299px;
+    width: 580px;
+    left: 448px;
+    top: 199px;
   }
 
   #submit-button {
-    top: 334px;
-    left: 1375.9px;
+    top: 234px;
+    left: 975.9px;
   }
 
   #results-div {
-    left: 705px;
-    top: 435px;
+    left: 505px;
+    top: 335px;
+  }
+  // favorites.scss media queries
+  #header-favorites span {
+    left: 522px;
+    top: 103px;
   }
 
+  #favorite-gems {
+    left: 532px;
+    top: 225px;
+  }
 }
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 320px) {
+  /* Styles */
+}
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+  /* Styles */
+}
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+  /* Styles */
+}
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+  /* Styles */
+}
+/* Desktops and laptops ----------- */
+@media only screen and (min-width : 1224px) {
+  // root.scss media queries
+  #map-image {
+    width: 400px;
+  }
 
+  .logo {
+    top: 3px;
+
+    img {
+      left: 265px;
+    }
+  }
+
+  .nav-tabs {
+    left: 265px;
+    top: 270px;
+  }
+
+  .header span {
+    left: 500px;
+    top: 103px;
+  }
+
+  #query {
+    height: 89px;
+    width: 780px;
+    left: 448px;
+    top: 199px;
+  }
+
+  #submit-button {
+    top: 234px;
+    left: 1175.9px;
+  }
+
+  #results-div {
+    left: 505px;
+    top: 335px;
+  }
+  // favorites.scss media queries
+  #header-favorites span {
+    left: 522px;
+    top: 103px;
+  }
+
+  #favorite-gems {
+    left: 532px;
+    top: 225px;
+  }
+}
 /* Large screens ----------- */
-@media only screen
-and (min-width : 1824px) {
-/* Styles */
-
+@media only screen and (min-width : 1824px) {
+  // root.scss media queries
   #map-image {
     width: 531px;
   }
@@ -100,6 +138,7 @@ and (min-width : 1824px) {
 
   .logo {
     top: 15px;
+
     img {
       left: 395px;
     }
@@ -126,12 +165,18 @@ and (min-width : 1824px) {
     left: 705px;
     top: 435px;
   }
+  // favorites.scss media queries
+  #header-favorites span {
+    left: 622px;
+    top: 203px;
+  }
 
+  #favorite-gems {
+    left: 632px;
+    top: 325px;
+  }
 }
-
 /* iPhone 4 ----------- */
-@media
-only screen and (-webkit-min-device-pixel-ratio : 1.5),
-only screen and (min-device-pixel-ratio : 1.5) {
-/* Styles */
+@media only screen and (-webkit-min-device-pixel-ratio : 1.5), only screen and (min-device-pixel-ratio : 1.5) {
+  /* Styles */
 }
