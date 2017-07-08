@@ -6,6 +6,8 @@
 </div>
 
 <script type="text/javascript">
+  // Gives the favoirtes tab the class "active" to add background color
+  $('#favorites-tab').addClass("active");
   // Creates <li> element for every gem in localStorage, including star icon and link to gem
   for (var key in localStorage) {
     // Ensures non gem-related keys in localStorage are displayed

@@ -6,8 +6,6 @@ html {
 
 .header span {
   position: absolute;
-  left: 705px;
-  top: 203px;
   font-size: 40px;
   font-style: normal;
   font-stretch: normal;
@@ -32,35 +30,34 @@ html {
 
   #map-image {
     height: auto;
-    width: 531px;
   }
 }
 
 .logo {
   position: absolute;
-  top: 15px;
 
   img {
     margin-top: 30px;
     position: relative;
-    left: 395px;
   }
 }
 
 .nav-tabs {
   position: absolute;
-  left: 390px;
-  top: 370px;
+  border-bottom: none !important;
 }
 
 .menu-tab {
   color: #FFFFFF;
   font-size: 18px;
-  background-color: rgba(255, 255, 255, 0.15);
   height: 50px !important;
   width: 143px !important;
   display: table;
   padding-left: 20px;
+}
+
+.active {
+  background-color: rgba(255, 255, 255, 0.15);
 }
 
 .menu-tab span {
@@ -74,12 +71,8 @@ html {
   border-radius: 40px;
   border: none;
   border: solid 1px #5E5E5E;
-  height: 89px;
-  width: 780px;
   padding-left: 30px;
   padding-right: 50px;
-  left: 648px;
-  top: 299px;
   font-size: 18px;
 }
 
@@ -91,15 +84,11 @@ html {
 
 #submit-button {
   position: absolute;
-  top: 334px;
-  left: 1375.9px;
 }
 
 #results-div {
   padding: 0;
   position: absolute;
-  left: 705px;
-  top: 435px;
 
   #gem-name {
     font-size: 18px;

@@ -1,0 +1,137 @@
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+/* Styles */
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen
+and (min-width : 321px) {
+/* Styles */
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen
+and (max-width : 320px) {
+/* Styles */
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px) {
+/* Styles */
+}
+
+/* iPads (landscape) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : landscape) {
+/* Styles */
+}
+
+/* iPads (portrait) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : portrait) {
+/* Styles */
+}
+
+/* Desktops and laptops ----------- */
+@media only screen
+and (min-width : 1224px) {
+  #map-image {
+    width: 400px;
+  }
+
+  .header span {
+    left: 600px;
+    top: 203px;
+  }
+
+  .logo {
+    top: 3px;
+    img {
+      left: 265px;
+    }
+  }
+
+  .nav-tabs {
+    left: 265px;
+    top: 270px;
+  }
+
+  #query {
+    height: 89px;
+    width: 780px;
+    left: 648px;
+    top: 299px;
+  }
+
+  #submit-button {
+    top: 334px;
+    left: 1375.9px;
+  }
+
+  #results-div {
+    left: 705px;
+    top: 435px;
+  }
+
+}
+
+/* Large screens ----------- */
+@media only screen
+and (min-width : 1824px) {
+/* Styles */
+
+  #map-image {
+    width: 531px;
+  }
+
+  .header span {
+    left: 705px;
+    top: 203px;
+  }
+
+  .logo {
+    top: 15px;
+    img {
+      left: 395px;
+    }
+  }
+
+  .nav-tabs {
+    left: 390px;
+    top: 370px;
+  }
+
+  #query {
+    height: 89px;
+    width: 780px;
+    left: 648px;
+    top: 299px;
+  }
+
+  #submit-button {
+    top: 334px;
+    left: 1375.9px;
+  }
+
+  #results-div {
+    left: 705px;
+    top: 435px;
+  }
+
+}
+
+/* iPhone 4 ----------- */
+@media
+only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {
+/* Styles */
+}
